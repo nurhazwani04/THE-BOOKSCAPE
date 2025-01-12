@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Bookstore</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('bc.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-size: 1.2em;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .image {
+            flex: 1;
+            text-align: center;
+        }
+        .image img {
+            width: 98%;
+            height: 80%;
+        }
+        .content {
+            flex: 1;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            text-align: justify;
+            border: 2px solid #000; 
+            border-radius: 25px;
+            padding: 20px; 
+            background-color:#eddcd2; 
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+         .video-container {
+            position: relative;
+            width: 60%; 
+            margin: 30px auto;
+            border: 8px solid black; 
+            border-radius: 12px; 
+            background-color: #000;
+            overflow: hidden;
+        }
+
+      
+        .video-container video {
+            width: 100%; 
+            height: 80%; 
+            object-fit: cover;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .button {
+            padding: 15px 30px;
+            background-color: #950952;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 250px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .button:hover {
+            background-color: orange;
+        }
+        .button span {
+            display: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .team-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 5px;
+        }
+        .team-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px; 
+        }
+        .team-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #950952;
+        }
+        .team-container:hover .overlay {
+            opacity: 1;
+        }
+        .icon {
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .fa-user:hover {
+            color: #eee;
+        }
+
+     footer {
+            background-color: #950952;
+            background-image: url('lb2.jpg');
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-size: 1.2em;
+
+}
+
+        footer h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        footer .footer-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer .footer-column {
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-column li {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+.footer-column img {
+    width: 60px; /* Sesuaikan lebar ikon */
+    height: auto; /* Kekalkan aspek ratio */
+    margin: 10px;
+}
+
+
+footer .social-icons a img {
+    width: 60px; /* Saiz yang kecil dan konsisten */
+    height: auto;
+    margin: 10px;
+}
+
+        footer .bottom-note {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #950952;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop::before {
+    content: "\2191"; /* Unicode untuk arrow ke atas */
+}
+
+        }
+
+        #backToTop:hover {
+            background-color: #950952;
+        }
+
+
+</style>
+    </style>
+</head>
+<body>
+
+<!-- WHO WE ARE SECTION -->
+<div class="container">
+    <div class="image">
+        <img src="bookstorenew.png" alt="Bookstore Illustration">
+    </div>
+    <div class="content">
+        <h2>WHO WE ARE</h2>
+        <p>
+            Welcome to The Bookscape, a one-stop destination for creativity, learning, and fun! Established in January 2024 in the heart of Alor Setar, Kedah, our store is more than just a bookstore—it’s a hub for students, readers, and families alike.
+            <br><br>
+            At The Bookscape, we proudly offer a wide collection of books, including novels, academic texts, fiction, and Islamic literature. But that’s not all! Our shelves are stocked with high-quality stationery, stylish tote bags, essential tools for students and creators like art supplies. For those looking to unwind or bond with friends, our games section offers something for everyone perfect for relaxing or bonding with loved ones.
+            <br><br>
+            What truly sets us apart is our unbeatable value, you won’t find deals like ours anywhere else. Whether you’re a reader, a creator, or someone seeking unique finds, The Bookscape is here to spark your passion and curiosity. Step into our world to explore endless possibilities, experience exceptional quality, and enjoy a welcoming space crafted just for you! &#129392;
+        </p>
+    </div>
+</div>
+
+<center><h1>OUR BOOK STORE</h1></center>
+<div class="video-container">
+    <video loop autoplay controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<br>
+<br>
+
+<h1>VISION, MISSION & VALUE</h1>
+
+<div class="button-container">
+    <button class="button" onclick="toggleInfo('vision-text')">
+        Vision
+        <span id="vision-text">Our vision is to become the go-to hub for book lovers, students, and creators, fostering a community that values knowledge, creativity, and affordable access to resources.</span>
+    </button>
+
+    <button class="button" onclick="toggleInfo('mission-text')">
+        Mission
+        <span id="mission-text">Our mission is to provide a diverse range of books, quality stationery, and creative tools at unbeatable prices, making education, creativity, and entertainment accessible to everyone.</span>
+    </button>
+
+<button class="button" onclick="toggleInfo('value-text')">
+        Value
+        <span id="value-text">
+            <ul>
+                <li>Community</li>
+                <li>Accessibility</li>
+                <li>Transparency</li>
+                <li>Sustainability</li>
+                <li>Passion for Knowledge</li>
+                <li>Customer-Centric Approach</li>
+            </ul>
+        </span>
+    </button>
+</div>
+
+<script>
+    function toggleInfo(id) {
+        var textElement = document.getElementById(id);
+        if (textElement.style.display === "none" || textElement.style.display === "") {
+            textElement.style.display = "block";
+        } else {
+            textElement.style.display = "none";
+        }
+    }
+</script>
+
+
+
+<div>
+<marquee scrollamount="10">
+<h1 style="border: 1px solid #950952; text-align: center; font-family: verdana; font-size: 50px; background-color: #ede0d4;">
+    <span style="color: #950952;">MEET</span>
+    <span style="color: #950952;">OUR</span>
+    <span style="color: #950952;">TEAM</span>
+</h1>
+</marquee>
+</div>
+
+<div class="chart-container">
+  <table align="center" cellpadding="10px" cellspacing="5px">
+  <tr>                         
+    <td align="center" style="background-color: #ede0d4; padding: 40px; border-radius: 15px; width: 95%; box-shadow: darkgrey;">
+    <b><p style="color: black; font-size: 30px;">THE BOOKSCAPE ORGANIZATION CHART</b>
+    <br>
+    <br>
+    <img src="chartnew.jpg" alt="family2" usemap="#fmily2map" style="width: 930px; height: 550px; border-radius: 2px;">
+    </td>
+  </tr>
+  </table> 
+</div>
+<br>
+<br>
+
+<!-- OUR TEAM SECTION -->
+
+<div class="team-wrapper">
+    <div class="team-container">
+        <img src="amni1.jpg" alt="Avatar" class="team-image">
+        <div class="overlay">
+            <a href="descamni.html" class="icon" title="User Profile">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="team-container">
+        <img src="waninew.jpg" alt="Avatar" class="team-image">
+        <div class="overlay">
+            <a href="descwani.html" class="icon" title="User Profile">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="team-container">
+        <img src="alia.jpg" alt="Avatar" class="team-image">
+        <div class="overlay">
+            <a href="descalia1.html" class="icon" title="User Profile">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="team-container">
+        <img src="aina2.jpg" alt="Avatar" class="team-image">
+        <div class="overlay">
+            <a href="descaina.html" class="icon" title="User Profile">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+        <h3>TO BE OUR MEMBERSHIP?</h3>
+        <p>If you're interested with our book collections, feel free to contact us.</p>
+
+<a href="contactus.html" style="text-decoration: none;">
+    <button style="background-color: #950952; color: white;">Click Here!</button>
+</a>
+
+
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>PARTNERSHIPS</h4>
+                <ul>
+                    <li>Websites</li>
+                    <li>Social Media</li>
+                    <li>Branding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Our Help</li>
+                    <li>Our Work</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li>Support Request</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+<div class="footer-column social-icons">
+    <h4>FOLLOW US</h4>
+    <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <!-- TikTok Icon -->
+        <a href="https://www.tiktok.com/@4rliaa_?_t=8recZsb6TlS&_r=1" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-tiktok" style="font-size: 35px;"></i>
+        </a>
+        
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/the_bookscape?igsh=MWNrcnlrNGtkZHAzcQ%3D%3D&utm_source=qr" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-instagram" style="font-size: 35px;"></i>
+        </a>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <div class="bottom-note">
+            <p>© 2025 BOOKSCAPE SDN BHD. All rights reserved. | Privacy Policy</p>
+        </div>
+    </footer>
+
+<button id="backToTop"></button>
+
+<script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+        const backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    }
+
+    // Attach scroll function to button click
+    document.getElementById("backToTop").addEventListener("click", scrollToTop);
+</script>
+
+</body>
+</html>

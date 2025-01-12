@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.back-button {
+  background-color: #2196F3;
+}
+
+.back-button:hover {
+  background-color: #0b7dda;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Your Payment is Successful!</h1>
+  <p>Thank you for your payment. You can now choose to return to the main page or stay here.</p>
+  <button class="back-button" onclick="goToMainPage()">Back to Main Page</button>
+  <button onclick="stayHere()">Stay Here</button>
+</div>
+
+<script>
+function goToMainPage() {
+  window.location.href = "homepage.html"; // Ganti dengan URL atau nama file halaman utama
+}
+
+function stayHere() {
+  alert("You chose to stay on this page!");
+}
+</script>
+
+</body>
+</html>
+

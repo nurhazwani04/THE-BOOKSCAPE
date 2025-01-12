@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location and Opening Hours</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+ <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+  body {
+  background-image: url('bc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-size: 1.2em;
+  font-family: verdana, sans-serif; 
+}
+
+
+</style>
+</head>
+
+<style>
+        body {
+ .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 40px;
+            color: white;
+          position: sticky; 
+           top: 0; 
+    z-index: 1000; 
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: white;
+        }
+
+            
+  <style>
+
+body {
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    background-image: url('bc.jpg'); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center top; 
+    background-size: 100% 100%;
+    font-size: 1.2em; 
+}
+      footer {
+            
+            color: black;
+            text-align: center;
+            padding: 5px 0;
+            border-top: 0px solid #950952;
+            position: relative;
+                }
+
+
+  
+    footer {
+        background-color: white;
+        background-image: url('lb2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; 
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 1.2em;
+    width: 100%; 
+    background-position: center; 
+    margin: 0; 
+
+    }
+
+
+    html, body {
+        width: 100%;
+        height: 100%;
+}
+
+        footer h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        footer .footer-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer .footer-column {
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-column li {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+.footer-column img {
+    width: 60px; 
+    height: auto;
+    margin: 10px;
+}
+
+
+footer .social-icons a img {
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}
+
+        footer .bottom-note {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #950952;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop::before {
+    content: "\2191";
+}
+
+        }
+
+        #backToTop:hover {
+            background-color: #950952;
+        }
+   
+</style>
+</head>
+    <style>
+    
+        .location-hours-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .location-card, .hours-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            padding: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 0.7s forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        
+        .location-card:hover, .hours-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        .location-card:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .hours-card:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .location-header, .hours-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .location-header i, .hours-header i {
+            font-size: 32px;
+            color: khaki;
+            transition: color 0.3s ease;
+        }
+
+        
+        .location-header:hover i, .hours-header:hover i {
+            color: maroon;
+        }
+
+        .location-header h3, .hours-header h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+       
+        .location-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hours-table th, .hours-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border: 2px solid black;
+        }
+
+        .hours-table th {
+            background-color:maroon;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hours-table tr:nth-child(even) {
+            background-color:#f2d8a5 ;
+        }
+
+        .hours-table td {
+            font-size: 16px;
+            color: black;
+        }
+
+       
+        @keyframes slideIn {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        media  {
+            .location-card, .hours-card {
+                width: 90%;
+            }
+
+            .location-header h3, .hours-header h3 {
+                font-size: 20px;
+            }
+        }
+
+footer {
+            
+            color: ;
+            text-align: center;
+            padding: 5px 0;
+            border-top: 3px solid #950952;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="location-hours-container">
+       
+        <div class="location-card">
+            <div class="location-header">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Location</h3>
+            </div>
+            <div class="location-details">
+                <p style="color: maroon;"><b>Address:</b> Aman Square, Jalan 3, 08000 Sungai Petani, Kedah</p>
+                <a href="https://maps.app.goo.gl/ZbycmX7cLPbFCERq7" target="_blank"><p style="color: maroon;"><b>Click here to view our location on Google Maps</a></b></p>
+          <center><img src="maps1.jpg" style="width: 40%; height: 80%; position: relative; top: 5px;"></center>
+
+            </div>
+        </div>
+
+        <div class="hours-card">
+            <div class="hours-header">
+                <i class="fas fa-clock"></i>
+                <h3>Opening Hours</h3>
+            </div>
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>9.00 - 6.00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<footer>
+        <h3>TO BE OUR MEMBERSHIP?</h3>
+        <p>If you're interested with our book collections, feel free to contact us.</p>
+
+<a href="contactus.html" style="text-decoration: none;">
+    <button style="background-color: #950952; color: white;">Click Here!</button>
+</a>
+
+
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>PARTNERSHIPS</h4>
+                <ul>
+                    <li>Websites</li>
+                    <li>Social Media</li>
+                    <li>Branding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Our Help</li>
+                    <li>Our Work</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li>Support Request</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-column social-icons">
+   <h4>FOLLOW US</h4>
+    <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <!-- TikTok Icon -->
+        <a href="https://www.tiktok.com/@4rliaa_?_t=8recZsb6TlS&_r=1" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-tiktok" style="font-size: 35px;"></i>
+        </a>
+        
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/the_bookscape?igsh=MWNrcnlrNGtkZHAzcQ%3D%3D&utm_source=qr" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-instagram" style="font-size: 35px;"></i>
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="bottom-note">
+            <p>© 2025 BOOKSCAPE SDN BHD. All rights reserved. | Privacy Policy</p>
+        </div>
+    </footer>
+
+<button id="backToTop"></button>
+
+<script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+        const backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    }
+
+    // Attach scroll function to button click
+    document.getElementById("backToTop").addEventListener("click", scrollToTop);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback and Tablet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+ <style>
+        body {
+   background-image: url('latar.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-size: 1.2em;
+}
+</style>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('bc.jpg');
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px;
+      flex-wrap: wrap; 
+    }
+
+    .tablet {
+      position: relative;
+      width: 400px; 
+      height: 500px; 
+      margin: 10px;
+      border: 16px black solid;
+      border-top-width: 60px;
+      border-bottom-width: 60px;
+      border-radius: 30px;
+    }
+
+    .tablet:before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 5px;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #333;
+      border-radius: 10px;
+    }
+
+    .tablet:after {
+      content: '';
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      left: 50%;
+      bottom: -65px;
+      transform: translate(-50%, -50%);
+      background: #333;
+      border-radius: 50%;
+    }
+
+    /* The screen (or content) of the device */
+    .tablet .content {
+      width: 100%;
+      height: 100%;
+      background: white;
+      margin: -1px;
+      overflow: hidden; 
+      position: relative;
+    }
+
+    .chat-wrapper {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      animation: scrollChat 20s linear infinite;
+    }
+
+    .chat-message {
+      background: #eee;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 10px 0;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .chat-message span {
+      font-weight: bold;
+    }
+
+    @keyframes scrollChat {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+
+    .feedback-form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 700px;
+      max-width: 500%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .feedback-form h2 {
+      color: black;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      text-align: left;
+      font-size: 16px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input[type="text"], input[type="email"], textarea, input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 2px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .rating i {
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .rating i:hover,
+    .rating i.active {
+      color: orange;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .feedback-message {
+      font-size: 18px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .feedback-message.success {
+      color: green;
+    }
+
+    .feedback-message.error {
+      color: red;
+    }
+
+    .image-preview {
+      margin-top: 10px;
+      display: none;
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+      border: 3px solid #ccc;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column; 
+        padding: 20px;
+      }
+
+      .tablet {
+        margin: 20px 0;
+        width: 80%;
+        height: 400px;
+      }
+
+      .feedback-form {
+        width: 100%;
+      }
+
+body {
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    background-image: url('bc.jpg'); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center top; 
+    background-size: 100% 100%; 
+    font-size: 1.2em;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Tablet Device -->
+    <div class="tablet">
+      <div class="content">
+        <div class="chat-wrapper">
+          <!-- Chat messages -->
+          <div class="chat-message">
+            <span> Nadia: </span>"I absolutely loved the book I bought from Online Bookscape! The delivery was quick, and the quality was outstanding."
+          </div>
+
+          <div class="chat-message">
+            <span>Maisara: </span> "Such a great collection of books! I’ll definitely be buying more from this website. Highly satisfied!"</div>
+
+          <div class="chat-message">
+            <span>Catrina: </span> "Such a great collection of books! I’ll definitely be buying more from this website. Highly satisfied!."
+          </div>
+
+          <div class="chat-message">
+            <span> Mario: </span> "Easy navigation, quick checkout, and my book arrived in perfect condition. Thank you, Online Bookscape!."
+          </div>
+
+          <div class="chat-message"> 
+            <span> Qistina: </span> "I’m so glad I found Online Bookscape. Great customer support and even better books!."
+          </div>
+
+          <div class="chat-message">
+            <span>Sarah: </span> "I found my favorite author’s latest book here at a great price! Definitely coming back for more." 
+          </div>
+
+          <!-- More chat messages can be added here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Feedback Form -->
+    <div class="feedback-form">
+      <h2><marquee>Customer Feedback</marquee></h2>
+      <form id="feedbackForm" enctype="multipart/form-data">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="rating">Rating (1-5):</label>
+        <div class="rating" id="rating">
+          <i class="fas fa-star" data-value="1"></i>
+          <i class="fas fa-star" data-value="2"></i>
+          <i class="fas fa-star" data-value="3"></i>
+          <i class="fas fa-star" data-value="4"></i>
+          <i class="fas fa-star" data-value="5"></i>
+        </div>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Enter your feedback" required></textarea>
+
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
+
+      <div class="feedback-message" id="feedbackMessage"></div>
+    </div>
+  </div>
+
+  <script>
+    // Rating stars functionality
+    const stars = document.querySelectorAll('.rating i');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = star.getAttribute('data-value');
+        stars.forEach(star => star.classList.remove('active'));
+        for (let i = 0; i < selectedRating; i++) {
+          stars[i].classList.add('active');
+        }
+      });
+    });
+
+    // Feedback form submission
+    const form = document.getElementById('feedbackForm');
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    const chatWrapper = document.querySelector('.chat-wrapper');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const comments = document.getElementById('comments').value;
+
+      if (name && email && comments && selectedRating) {
+        // Create a new chat message element
+        const newChatMessage = document.createElement('div');
+        newChatMessage.classList.add('chat-message');
+        newChatMessage.innerHTML = `<span>${name}: </span>"${comments}"`;
+
+        // Add it to the chat wrapper
+        chatWrapper.appendChild(newChatMessage);
+
+        // Display a success message to the user
+        feedbackMessage.textContent = 'Thank you for your feedback!';
+        feedbackMessage.classList.remove('error');
+        feedbackMessage.classList.add('success');
+      } else {
+        feedbackMessage.textContent = 'Please fill out all fields and select a rating.';
+        feedbackMessage.classList.remove('success');
+        feedbackMessage.classList.add('error');
+      }
+
+      // Show the feedback message and reset form
+      feedbackMessage.style.display = 'block';
+      form.reset();
+      stars.forEach(star => star.classList.remove('active'));
+      imagePreview.style.display = 'none';
+
+      // Ensure the chat scrolls down automatically to show the latest message
+      chatWrapper.scrollTop = chatWrapper.scrollHeight;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+   background-image: url('latar.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+body {
+  background-color: #fff0f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  max-width: 2500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.slider {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  background-color: #E8ADAA;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card img {
+  width: 190px;
+  height: 240px;
+}
+
+.card h3 {
+  margin: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #da627d;
+}
+
+.card.active {
+  transform: scale(1.2);
+  background-color: #a53860;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: #a53860;
+  border: none;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-top: 3px solid #950952;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="slider" id="slider">
+    <div class="card">
+      <img src="novel1.png" alt="novel">
+      <h3>NOVEL</h3>
+    </div>
+
+    <div class="card active">
+      <img src="academic.png" alt="academic">
+      <h3>ACADEMIC</h3>
+    </div>
+
+    <div class="card">
+      <img src="islamic.png" alt="Islamic">
+      <h3>ISLAMIC</h3>
+    </div>
+
+    <div class="card">
+      <img src="fiction.png" alt="fiction">
+      <h3>FICTION</h3>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">&#10094;</button>
+    <button onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<script>
+let currentSlide = 1;
+
+function updateSlides() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    if (index === currentSlide) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+}
+
+function showSlide(index) {
+  const totalSlides = document.querySelectorAll('.card').length;
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+  updateSlides();
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+updateSlides();
+</script>
+
+<footer>
+      <center><p>Copyright © 2025 BOOKSCAPE SDN BHD. All Rights Reserved | BOOKSCAPEOnline.com.</p></center>
+</footer
+
+
+

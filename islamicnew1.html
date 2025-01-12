@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Book Collection</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+ <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+        body {
+   background-image: url('bc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-size: 1.2em;
+}
+</style>
+</head>
+
+<style>
+  * {box-sizing: border-box;}
+  body {font-family: Verdana, sans-serif; margin: 0; background-color: #F8F6F1;}
+  .slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: 20px auto;
+    background-color:  white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .mySlides {
+    display: none;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mySlides img {
+    max-width: 400px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  .mySlides .content {
+    text-align: left;
+    max-width: 600px;
+  }
+  .mySlides .content h3 {
+    margin: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  .mySlides .content p {
+    margin: 20px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  
+  .dot-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: #F8F6F1;
+  }
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Our Best Seller Collection</h1>
+<br>
+<i><h2 style="text-align: center;">Explore the best books available:</h2></i>
+
+<div class="slideshow-container">
+
+
+  <div class="mySlides">
+    <img src="bsbook2.jpg" alt="Book 2">
+    <div class="content">
+      <h2>40 HADIS AKHLAK MULIA</h2>
+      <p style="font-size:20px">Koleksi hadis pilihan tentang akhlak mulia yang menjadi panduan kehidupan. Kitab ini memaparkan contoh-contoh ketinggian akhlak Baginda SAW dan bimbingan ke arah kesempurnaan akhlak.</p>
+  </div>
+</div>
+
+  <div class="mySlides">
+    <img src="bsbook10.jpg" alt="Book 10">
+    <div class="content">
+      <h2>TAFSIR AL-'USYR AL-AKHIR</h2>
+      <p style="font-size:20px">Tafsir Al-Usyr Al-Akhir Dari Al Qur'an Al Karim juz (28, 29, 30): Disertai Hukum-hukum Penting Bagi Seorang Muslim</p>
+    </div>
+  </div>
+
+ <div class="mySlides">
+    <img src="bsbook4.jpg" alt="Book 4">
+    <div class="content">
+      <h2>PANDUAN PARA IMAM</h2>
+      <p style="font-size:20px">Buku ini mengandungi panduan langkah demi langkah kepada para imam dan juga pemimpin agama masyarakat yang mengandungi pelbagai panduan.</p>
+    </div>
+  </div>
+  
+ <div class="mySlides">
+    <img src="book4f.jpg" alt="Book 7">
+    <div class="content">
+      <h2>NIRNAMA</h2>
+           <p style="font-size:20px">Seorang pendekar tanpa nama telah menjadi buah mulut ramai...</p>
+    </div>
+  </div>
+
+<div class="mySlides">
+    <img src="book4.jpg" alt="Book 6">
+    <div class="content">
+      <h2>KITA CUMA KAWAN, KAN?</h2>
+      <p style="font-size:20px">Yulia cuba mengambil hati. Namun pantang bertemu, pasti Adam cari pasal. Semakin lama kenal, diam-diam, ada perasaan asing berputik dalam hati.
+Soalnya, adakah ia sesuatu yang pasti atau hanya mainan perasaan? Ini cinta, atau sekadar kawan?...</p>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="dot-container">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+ <span class="dot"></span>
+<span class="dot"></span>
+
+
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slides[slideIndex-1].style.display = "flex";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change slide every 2 seconds
+}
+</script>
+<br>
+<br>
+<br>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F6F1;
+  }
+  
+
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+ }
+  .book-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 900px;
+  }
+
+  .book-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+
+  .book-content {
+    flex: 1;
+  }
+
+  .book-content h3 {
+    color: black;
+    font-size: 25px;
+    margin: 0 0 10px;
+  }
+
+  .book-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 15px;
+  }
+  
+  .star-rating {
+    margin: 10px 0;
+  }
+
+  .fa-star {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+  .price {
+    font-size: 10rem;
+    color: #555;
+ }
+   .price .original {
+     text-decoration: line-through;
+     color: #999;
+ }
+   .price .discount {
+     font-weight: bold;
+    color: #d9534f;
+}
+  .btn-container {
+    margin-top: 15px;
+  }
+
+  .btn {
+    border: 2px solid blue;
+    background-color: white;
+    color: blue;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 14px;
+  }
+
+  .btn:hover {
+    background: blue;
+    color: white;
+  }
+
+.buy-btn {
+    border: 2px solid green;
+    background-color: white;
+    color: green;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+  .buy-btn:hover {
+    background: green;
+    color: white;
+</style>
+
+<style>
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #950952;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop::before {
+    content: "\2191";
+}
+
+        }
+
+        #backToTop:hover {
+            background-color: #950952;
+        }
+   
+</style>
+</head>
+<body>
+
+
+
+<div class="book-grid">
+  <div class="book-card">
+    <img src="book1new.jpg" alt="DOSA-DOSA BESAR">
+    <div class="book-content">
+      <h3>DOSA-DOSA BESAR</h3>
+      <p>Buku yang membincangkan tentang dosa-dosa besar yang perlu dijauhi oleh setiap umat Islam...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </div>
+     <p class="price">
+        <span class="discount">RM12.00</span>
+     </p>
+
+      <div class="btn-container">
+        <a href="descbook1new.html" class="btn">Read More</a>
+        <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <img src="bsbook2.jpg" alt="40 HADIS AKHLAK MULIA">
+    <div class="book-content">
+      <h3>40 HADIS AKHLAK MULIA</h3>
+      <p>Koleksi hadis pilihan tentang akhlak mulia yang menjadi panduan kehidupan...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+
+     <p class="price">
+        <span class="discount">RM19.00</span>
+     </p>
+
+      <div class="btn-container">
+        <a href="descbook2new.html" class="btn">Read More</a>
+        <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <img src="book9new.jpg" alt="APA ERTINYA SAYA MENGANUT ISLAM"><div class="book-content">
+    <h3>APA ERTINYA SAYA MENGANUT ISLAM</h3>
+    <p>Membahas sifat-sifat yang wajib ada pada setiap orang muslim supaya dengan sifat-sifat tersebut ia benar-benar menjadi seorang muslim...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star "></span>
+    </div>
+   <p class="price">
+        <span class="original">RM15.00</span> 
+        <span class="discount">RM8.50</span>
+   </p>
+    <div class="btn-container">
+      <a href="descbook9new.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+  <div class="book-card">
+    <img src="bsbook4.jpg" alt="PANDUAN PARA IMAM">
+    <div class="book-content">
+      <h3>PANDUAN PARA IMAM</h3>
+      <p>Buku ini ditulis khusus untuk memberikan panduan kepada para penuntut ilmu...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+     <p class="price">
+        <span class="discount">RM20.00</span>
+     </p>
+
+      <div class="btn-container">
+        <a href="descbook4new.html" class="btn">Read More</a>
+        <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="book-card">
+  <img src="book5new.jpg" alt="MATLA' AL-BADRAIN">
+  <div class="book-content">
+    <h3>MATLA' AL-BADRAIN</h3>
+    <p>Sebuah kitab klasik dalam bidang fiqh yang disusun berdasarkan mazhab Syafi’i. Kitab ini ditulis oleh ulama terkenal dari dunia Melayu dan menjadi rujukan utama dalam pendidikan Islam...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <p class="price">
+      <span class="original">RM38.00</span> 
+      <span class="discount">RM32.30</span>
+    </p>
+    <div class="btn-container">
+      <a href="descbook5new.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="book-card">
+  <img src="bsbook10.jpg" alt="TAFSIR AL-'USYR AL-AKHIR">
+  <div class="book-content">
+    <h3>TAFSIR AL-'USYR AL-AKHIR</h3>
+    <p>Tafsir Al-Usyr Al-Akhir Dari Al Qur'an Al Karim juz (28, 29, 30): Disertai Hukum-hukum Penting Bagi Seorang Muslim...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+        <span class="discount">RM40.00</span>
+    </p>
+    <div class="btn-container">
+      <a href="descbook10new.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+  <img src="book1f.jpg" alt="Book 1">
+  <div class="book-content">
+    <h3>EMPAYAR</h3>
+    <p>Empayar Hikayat Tanpa Nama oleh Teme Abdullah: Mengisahkan tentang perjuangan, persahabatan, dan keimanan. 🌟
+Sebuah cerita epik yang menyentuh jiwa pembaca...</p>
+    <div class="star-rating">
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+         <span class="original">RM30.00</span>
+         <span class="discount">RM25.50</span>
+     </p>
+    <div class="btn-container">
+      <a href="sinop1.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+  <img src="book2f.jpg" alt="EMPAYAR 2">
+  <div class="book-content">
+    <h3>EMPAYAR 2</h3>
+    <p>Ribuan tahun selepas peperangan yang memusnahkan hampir keseluruhan dunia....</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+    <p class="price"> 
+       <span class="discount">RM30.00</span>
+     </p>
+    <div class="btn-container">
+      <a href="sinop2.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+<img src="book3f.jpg" alt="EMPAYAR 3">
+  <div class="book-content">
+    <h3>EMPAYAR 3</h3>
+      <p>Saka raja yang diwarisi telah memberi kesaktian luar biasa kepada Sang Putera...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </div>
+   <p class="price">
+       <span class="discount">RM30.00</span>
+   </p>
+
+    <div class="btn-container">
+       <a href="sinop3.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+  <img src="book4f.jpg" alt="NIRNAMA">
+  <div class="book-content">
+    <h3>NIRNAMA</h3>
+      <p>Seorang pendekar tanpa nama telah menjadi buah mulut ramai..</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+
+    <p class="price">
+        <span class="original">RM50.00</span> 
+      <span class="discount">RM42.50</span>   
+        </p>
+
+    <div class="btn-container">
+      <a href="sinop4.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+  <img src="book5f.jpg" alt="NIRNAMA 2">
+  <div class="book-content">
+    <h3>NIRNAMA 2</h3>
+      <p>10 tahun telah berlalu semenjak Jagat Suci dan Raja Bersiong ditumbangkan. Insan yang digelar sebagai Nirnama telah lama tidak menggunakan gelaran tersebut ..</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <p class="price">
+        <span class="discount">RM50.00</span>   
+        </p>
+
+    <div class="btn-container">
+      <a href="sinop5.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="book-card">
+  <img src="book6f.jpg" alt="SEMUSIM DI BARZAKH">
+  <div class="book-content">
+    
+      <h3>SEMUSIM DI BARZAKH</h3>
+    <p>  Keadaannya yang sebenar hanya disampaikan melalui apa yang diceritakan oleh Rasulullah SAW, jadi apakah benar Novel ini ingin menyingkap sesuatu yang mustahil?....</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+        <span class="discount">RM25.00</span>   
+        </p>
+
+    <div class="btn-container">
+      <a href="sinop6.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="book-card">
+<img src="pc1.png" alt="REVISI">
+  <div class="book-content">
+    <h3>REVISI CEPAT PT3</h3>
+    <h2>BAHASA MELAYU</h2>
+      <p>Buku ini disusun untuk membantu pelajar Tingkatan 1 hingga 3 memahami asas Bahasa Melayu dengan mudah dan cepat. Kandungan merangkumi:</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+   <p class="price">
+      <span class="original">RM22.30</span> 
+      <span class="discount">RM18.95</span>
+    </p>
+
+    <div class="btn-container">
+       <a href="book1.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="book-card">
+  <img src="pc5.png" alt="REVISI">
+  <div class="book-content">
+    <h3>REVISI CEPAT PT3</h3>
+      <h2>GEOGRAFI</h2>
+    <p>Buku ini memberi tumpuan kepada konsep utama Geografi dengan pendekatan yang ringkas dan mudah difahami. Kandungan merangkumi:</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+      <span class="original">RM24.90</span> 
+      <span class="discount">RM21.53</span>
+    </p>
+
+    <div class="btn-container">
+      <a href="book5.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+  <img src="pc6.png" alt="REVISI">
+  <div class="book-content">
+    <h3>REVISI SUKSES SPM</h3>
+      <h2>ENGLISH</h2>
+    <p>Buku ini mempersiapkan pelajar untuk menghadapi kertas English SPM dengan yakin. Kandungan merangkumi:
+
+</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+      <span class="original">RM29.90</span> 
+      <span class="discount">RM25.40</span>
+    </p>
+
+
+    <div class="btn-container">
+      <a href="book7.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+ <img src="pc8.png" alt="REVISI">
+  <div class="book-content"><h3>REVISI SUKSES SPM</h3>
+      <h2>SEJARAH</h2>
+    <p>Buku ini membimbing pelajar memahami peristiwa sejarah dengan kaedah mudah dan tersusun. Kandungan termasuk:</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+
+    <p class="price">
+      <span class="original">RM32.30</span> 
+      <span class="discount">RM27.46</span>
+    </p>
+
+    <div class="btn-container">
+      <a href="book8.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="book-card">
+   <img src="pc9.png" alt="REVISI">
+  <div class="book-content">
+    <h3>REVISI SUKSES SPM</h3>
+      <h2>MATEMATIK</h2>
+    <p>Buku ini membantu pelajar memahami konsep matematik asas hingga lanjutan dengan mudah. Kandungannya termasuk:</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star "></span>
+      <span class="fa fa-star "></span>
+    </div>
+
+
+     <p class="price">
+        <span class="discount">RM35.90</span>
+     </p>
+
+    <div class="btn-container">
+      <a href="book9.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="book-card">
+  <img src="pc10.png" alt="REVISI">
+  <div class="book-content">
+    <h3>REVISI SUKSES SPM</h3>
+      <h2>SAINS</h2>
+    <p>Buku ini membantu pelajar memahami konsep asas dan lanjutan dalam subjek Sains. Kandungannya merangkumi:</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+    <p class="price">
+        <span class="discount">RM35.90</span>
+     </p>
+
+
+    <div class="btn-container">
+      <a href="book10.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="book-card">
+ <img src="book1.png">
+  <div class="book-content">
+      <h3>BAYANG SOFEA</h3>
+      <p>Sofea, seorang pekerja yang berdedikasi dan bijak, bercita-cita ingin berjaya di syarikat RICE dengan hasil usaha sendiri. Dia menyangka kehidupannya akan menjadi normal sepertimana orang lain...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+    <p class="price">
+        <span class="discount">RM 34.00</span>
+     </p>
+
+    <div class="btn-container">
+      <a href="descbook1.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="book-card">
+ <img src="book2.png">
+  <div class="book-content">
+      <h3>KING HAIDAR</h3>
+      <p>Suria Andreana menjangkakan kisah cintanya dan Raja Haidar sudah berakhir. Namun, semuanya menjadi kompleks apabila lelaki itu kembali muncul dalam hidupnya. Dan kemuncaknya, satu rahsia terbongkar!...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+         <span class="fa fa-star"></span>
+      </div>
+    <p class="price">
+        <span class="discount">RM 34.00</span>
+     </p>
+
+    <div class="btn-container">
+      <a href="descbook2.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="book-card">
+  <img src="book4.jpg">
+  <div class="book-content">
+      <h3>KITA CUMA KAWAN, KAN?</h3>
+      <p>Yulia cuba mengambil hati. Namun pantang bertemu, pasti Adam cari pasal. Semakin lama kenal, diam-diam, ada perasaan asing berputik dalam hati.
+Soalnya, adakah ia sesuatu yang pasti atau hanya mainan perasaan? Ini cinta, atau sekadar kawan?...</p>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+
+    <p class="price">
+        <span class="discount">RM 34.00</span>
+     </p>
+
+
+    <div class="btn-container">
+      <a href="descbook4.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="book-card">
+ <img src="book5.png">
+  <div class="book-content">
+       <h3>YES, CAPTAIN ZUL AARYAN</h3>
+    <p>Pertemuan mereka di lapangan terbang Melbourne telah mencetuskan ‘peperangan.’
+Dan mereka bertemu lagi. Kali ini di dalam pesawat pula. Lebih mengejutkan, pesawat itu dikendalikan oleh Zul Aaryan sebagai captain yang bertugas...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+     <p class="price">
+        <span class="discount">RM 28.00</span>
+     </p>
+
+    <div class="btn-container">
+      <a href="descbook5.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="book-card">
+ <img src="book9a.jpg">
+  <div class="book-content">
+     <h3>SEE YOU IN A BIT</h3>
+    <p>Benarkah cinta sejati itu wujud? Hari saja Sang Pencipta hadirkan siang berganti malam. Jadi apa jaminan seorang manusia tidak boleh berubah hati dalam sekelip mata?
+...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star "></span>
+    </div>
+    <p class="price">
+       <span class="original">RM 30.00</span> 
+       <span class="discount">RM 25.50</span>
+     </p>
+
+
+    <div class="btn-container">
+      <a href="descbook9.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="book-card">
+<img src="book6a.jpg">
+  <div class="book-content">
+      <h3>DIA HERO SEMPURNA</h3>
+    <p>The girl with a broken wings, itulah yang boleh diibaratkan dengan kisah hidup Bellisa Niliyyah. Luarnya tampak indah, serba serbi sempurna. Bak kata orang memang material girl...</p>
+    <div class="star-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+    <p class="price">
+       <span class="original">RM 29.00</span> 
+       <span class="discount">RM 24.65</span>
+     </p>
+
+    <div class="btn-container">
+      <a href="descbook6.html" class="btn">Read More</a>
+      <a href="buyform1.html" class="btn buy-btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+
+<button id="backToTop"></button>
+
+<script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+        const backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    }
+
+    // Attach scroll function to button click
+    document.getElementById("backToTop").addEventListener("click", scrollToTop);
+</script>
+</body>
+</html>

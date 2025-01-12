@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bookscape</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+
+        }       
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+      
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        
+        .numbertext {
+            color: #333;
+            font-size: 14px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+       
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+       
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .promo {
+            background-color: #bc4749;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .countdown {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+  
+        h1 {
+            margin: 20px 0;
+            color: #d9534f;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: calc(100% / 3);
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .slide:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .slide img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+        .slide h3 {
+            margin: 15px 0 5px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .slide p {
+            color: #555;
+            margin: 5px 0;
+        }
+        .price {
+            font-size: 1rem;
+            color: #555;
+        }
+        .price .original {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .price .discount {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+   
+
+
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            margin: 0 10px;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature img {
+            max-width: 60px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature img:hover {
+            transform: scale(1.1);
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .feature p {
+            font-size: 12px;
+            color: #777;
+        }
+
+      footer {
+            
+            color: black;
+            text-align: center;
+            padding: 5px 0;
+            border-top: 0px solid #950952;
+            position: relative;
+                }
+ 
+
+ 
+ footer {
+            background-color: #950952;
+            background-image: url('lb2.jpg');
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-size: 1.2em;
+
+}
+
+        footer h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        footer .footer-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer .footer-column {
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-column li {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+.footer-column img {
+    width: 60px; /* Sesuaikan lebar ikon */
+    height: auto; /* Kekalkan aspek ratio */
+    margin: 10px;
+}
+
+
+footer .social-icons a img {
+    width: 60px; /* Saiz yang kecil dan konsisten */
+    height: auto;
+    margin: 10px;
+}
+
+        footer .bottom-note {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #950952;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop::before {
+    content: "\2191"; /* Unicode untuk arrow ke atas */
+}
+
+        }
+
+        #backToTop:hover {
+            background-color: #950952;
+        }
+
+                    
+  </style>
+</head>
+<body>
+                          
+    <!-- Slider Section -->
+    <section class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="header1.png" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="header3.png" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="header2.png" alt="Slide 3">
+        </div>
+    </section>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+<body>
+    <h1>Promo New Year 2025 - 15% OFF!</h1>
+    <div class="slideshow-container">
+        <div class="slides">
+            <div class="slide">
+                <img src="book1f.jpg" alt="Book 1">
+                <h3>Empayar</h3>
+                <p class="price">
+                    <span class="original">RM30.00</span> 
+                    <span class="discount">RM25.50</span>
+                </p>
+            </div>
+            <div class="slide">
+                <img src="book4f.jpg" alt="Book 2">
+                <h3>Nirnama</h3>
+                <p class="price">
+                    <span class="original">RM50.00</span> 
+                    <span class="discount">RM42.50</span>
+                </p>
+            </div>
+            <div class="slide">
+                <img src="novel1.jpg" alt="Book 3">
+                <h3>See You In A Bit</h3>
+                <p class="price">
+                    <span class="original">RM30.00</span> 
+                    <span class="discount">RM25.50</span>
+                </p>
+            </div>
+            <div class="slide">
+                <img src="novel2.jpg" alt="Book 4">
+                <h3>Dia Hero Sempurna</h3>
+                <p class="price">
+                    <span class="original">RM29.00</span> 
+                    <span class="discount">RM24.65</span>
+                </p>
+            </div>
+            <div class="slide">
+                <img src="islamic1.jpg" alt="Book 5">
+                <h3> Apa Ertinya Saya Menganut Agama Islam</h3>
+                <p class="price">
+                    <span class="original">RM10.00</span> 
+                    <span class="discount">RM8.50</span>
+                </p>
+            </div>
+            <div class="slide">
+                <img src="ac1.jpg" alt="Book 6">
+                <h3>Visi Sukses SPM TING.4 & 5</h3>
+                <p class="price">
+                    <span class="original">RM32.30</span> 
+                    <span class="discount">RM27.46</span>
+                </p>
+            </div>
+         </div>
+        <div class="navigation">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideWidth = slides.querySelector('.slide').clientWidth;
+        const totalSlides = slides.children.length;
+        const slidesPerView = 3;
+        let currentIndex = 0;
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex <= 0) ? totalSlides - slidesPerView : currentIndex - 1;
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex >= totalSlides - slidesPerView) ? 0 : currentIndex + 1;
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        });
+    </script>
+
+    <div class="content">
+        <h2>WHY CHOOSE US?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="freeship.jpg" alt="Free Shipping">
+                <p>Free Shipping</p>
+            </div>
+            <div class="feature">
+                <img src="cashback.png" alt="Money Back">
+                <p>Money Back Guarantee</p>
+            </div>
+            <div class="feature">
+                <img src="cod3.png" alt="Cash on Delivery">
+                <p>Cash on Delivery</p>
+            </div>
+        </div>
+
+           </div>
+
+    <footer>
+        <h3>TO BE OUR MEMBERSHIP?</h3>
+        <p>If you're interested with our book collections, feel free to contact us.</p>
+
+<a href="contactus.html" style="text-decoration: none;">
+    <button style="background-color: #950952; color: white;">Click Here!</button>
+</a>
+
+
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>PARTNERSHIPS</h4>
+                <ul>
+                    <li>Websites</li>
+                    <li>Social Media</li>
+                    <li>Branding</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Our Help</li>
+                    <li>Our Work</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li>Support Request</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+<div class="footer-column social-icons">
+    <h4>FOLLOW US</h4>
+    <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <!-- TikTok Icon -->
+        <a href="https://www.tiktok.com/@4rliaa_?_t=8recZsb6TlS&_r=1" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-tiktok" style="font-size: 35px;"></i>
+        </a>
+        
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/the_bookscape?igsh=MWNrcnlrNGtkZHAzcQ%3D%3D&utm_source=qr" target="_blank" style="text-decoration: none; color: #000000; text-align: center;">
+            <i class="fab fa-instagram" style="font-size: 35px;"></i>
+        </a>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <div class="bottom-note">
+            <p>© 2025 BOOKSCAPE SDN BHD. All rights reserved. | Privacy Policy</p>
+        </div>
+    </footer>
+
+<button id="backToTop"></button>
+
+<script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+        const backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    }
+
+    // Attach scroll function to button click
+    document.getElementById("backToTop").addEventListener("click", scrollToTop);
+</script>
+
+<script>
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        // Countdown Timer
+        const countDownDate = new Date("Jan 15, 2025 23:59:59").getTime();
+        const countdownElement = document.createElement('div');
+        countdownElement.classList.add('promo');
+        countdownElement.innerHTML = 'New Year Promo Ends In: <span class="countdown" id="countdown"></span>';
+        document.body.insertBefore(countdownElement, document.querySelector('.content'));
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }
+
+        const x = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
